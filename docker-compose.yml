@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  micro:
+    container_name: "micro"
+    image: micro:2
+    build:
+      context: .
+    ports:
+      - "3001:3001"
+    networks:
+      - micro-red
+networks:
+  micro-red:
