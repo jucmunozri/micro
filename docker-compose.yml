@@ -1,11 +1,35 @@
 version: "3.7"
 services:
-  micro:
-    container_name: "micro"
+  micro01:
+    container_name: "micro01"
     image: jucmunozri/web:2
     ports:
-      - "3001:3001"
+      - "3001"
     networks:
       - micro-red
+    environment:
+      CONTAINER_HOST: micro01
+  micro02:
+    container_name: "micro02"
+    image: jucmunozri/web:2
+    ports:
+      - "3001"
+    networks:
+      - micro-red
+    environment:
+      CONTAINER_HOST: micro02
+  load-balancer:
+    container_name: "load-balancer"
+    image: load-balancer:v1
+    build:
+      context: ./load-balancer
+    ports:
+      - "8082:80"
+    networks:
+      - micro-red
+    depends_on:
+      - micro01
+      - micro02
+    restart: always
 networks:
   micro-red:

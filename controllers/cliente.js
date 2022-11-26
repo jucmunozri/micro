@@ -27,6 +27,7 @@ const { request, response } = require("express");
  */
 const getClientes = async (req = request, res = response) => {
   try {
+    console.log("Ambiente: " + process.env.CONTAINER_HOST);
     console.log(req.query);
     const estado = req.query.estado;
     const query = { estado: estado };
@@ -42,6 +43,7 @@ const getClientes = async (req = request, res = response) => {
  */
 const getClienteByID = async (req = request, res = response) => {
   try {
+    console.log("Ambiente: " + process.env.CONTAINER_HOST);
     const id = req.params.id;
     const filter = { _id: id };
     const clienteDB = await Cliente.findOne(filter);
