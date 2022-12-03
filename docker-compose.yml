@@ -24,7 +24,7 @@ services:
     build:
       context: ./load-balancer
     ports:
-      - "6002:80"
+      - "6000:80"
     networks:
       - micro-red
     depends_on:
