@@ -32,4 +32,4 @@ services:
       - micro02
     restart: always
 networks:
-  micro-red:
+  rednet:
