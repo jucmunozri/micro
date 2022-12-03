@@ -18,13 +18,13 @@ services:
       - micro-red
     environment:
       CONTAINER_HOST: "micro02"
-  load-balancer-jucmunozri:
-    container_name: "load-balancer-jucmunozri"
-    image: load-balancer-jucmunozri:v1
+  load-balancer-jucmunozri-v1:
+    container_name: "load-balancer-jucmunozri-v1"
+    image: load-balancer-jucmunozri-v1:v1
     build:
       context: ./load-balancer
     ports:
-      - "6000:80"
+      - "6001:80"
     networks:
       - micro-red
     depends_on:
