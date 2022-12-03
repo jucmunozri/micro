@@ -26,13 +26,11 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8082/api/clientes?estado=true",
+							"raw": "{{port}}/clientes?estado=true",
 							"host": [
-								"localhost"
+								"{{port}}"
 							],
-							"port": "8082",
 							"path": [
-								"api",
 								"clientes"
 							],
 							"query": [
@@ -47,19 +45,29 @@
 				},
 				{
 					"name": "Consultar por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "localhost:3001/api/clientes/636e09737b37f8132fb5d557",
+							"raw": "{{port}}/clientes/6373f13225ff81966d2c5f4a",
 							"host": [
-								"localhost"
+								"{{port}}"
 							],
-							"port": "3001",
 							"path": [
-								"api",
 								"clientes",
-								"636e09737b37f8132fb5d557"
+								"6373f13225ff81966d2c5f4a"
 							]
 						}
 					},

@@ -4,7 +4,7 @@ services:
     container_name: "micro01"
     image: jucmunozri/web:2
     ports:
-      - "3001"
+      - "6000:3001"
     networks:
       - micro-red
     environment:
@@ -13,7 +13,7 @@ services:
     container_name: "micro02"
     image: jucmunozri/web:2
     ports:
-      - "3001"
+      - "6001:3001"
     networks:
       - micro-red
     environment:
@@ -24,7 +24,7 @@ services:
     build:
       context: ./load-balancer
     ports:
-      - "8082:80"
+      - "6002:80"
     networks:
       - micro-red
     depends_on:
