@@ -6,7 +6,7 @@ services:
     ports:
       - "3001"
     networks:
-      - micro-red
+      - rednet
     environment:
       CONTAINER_HOST: "micro01"
   micro02:
@@ -15,18 +15,18 @@ services:
     ports:
       - "3001"
     networks:
-      - micro-red
+      - rednet
     environment:
       CONTAINER_HOST: "micro02"
-  load-balancer-jucmunozri-v1:
-    container_name: "load-balancer-jucmunozri-v1"
-    image: load-balancer-jucmunozri-v1:v1
+  load-balancer-jucmunozri-v2:
+    container_name: "load-balancer-jucmunozri-v2"
+    image: load-balancer-jucmunozri-v2:v2
     build:
       context: ./load-balancer
     ports:
       - "6001:80"
     networks:
-      - micro-red
+      - rednet
     depends_on:
       - micro01
       - micro02
