@@ -18,9 +18,9 @@ services:
       - micro-red
     environment:
       CONTAINER_HOST: "micro02"
-  load-balancer-j:
-    container_name: "load-balancer-j"
-    image: load-balancer-j:v1
+  load-balancer-jucmunozri:
+    container_name: "load-balancer-jucmunozri"
+    image: load-balancer-jucmunozri:v1
     build:
       context: ./load-balancer
     ports:
