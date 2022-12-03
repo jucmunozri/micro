@@ -1,9 +1,9 @@
 const { Router } = require("express");
-const Cliente = require("../models/cliente");
-const Etapa = require("../models/etapas");
-const Proyecto = require("../models/proyecto");
-const TipoProyecto = require("../models/tipoProyecto");
-const Universidad = require("../models/universidad");
+// const Cliente = require("../models/cliente");
+// const Etapa = require("../models/etapas");
+// const Proyecto = require("../models/proyecto");
+// const TipoProyecto = require("../models/tipoProyecto");
+// const Universidad = require("../models/universidad");
 const {
   // createCliente,
   getClientes,

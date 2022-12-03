@@ -2,8 +2,8 @@ const express = require("express");
 
 const app = express(); // se crea instancia de express
 
-const fileUpload = require("express-fileupload");
-const cors = require("cors");
+// const fileUpload = require("express-fileupload");
+// const cors = require("cors");
 /**
  * importación de rutas
  */
@@ -16,15 +16,15 @@ const cliente = require("./routes/cliente");
  * middlewares
  */
 //middlewares
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(
-  fileUpload({
-    useTempFiles: true,
-    tempFileDir: "/tmp/",
-  })
-);
-app.use(cors());
+// app.use(
+//   fileUpload({
+//     useTempFiles: true,
+//     tempFileDir: "/tmp/",
+//   })
+// );
+// app.use(cors());
 /**
  * Utilizar sustantivos en plural para una URI
  */

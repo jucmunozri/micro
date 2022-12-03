@@ -34,7 +34,9 @@ const getClientes = async (req = request, res = response) => {
     const clientes = await Cliente.find(query);
     return res.json(clientes);
   } catch (e) {
-    return res.status(500).json({ msj: e });
+    return res
+      .status(500)
+      .json({ msj: "No se puede realizar la solicitud!!", e });
   }
 };
 
@@ -49,7 +51,9 @@ const getClienteByID = async (req = request, res = response) => {
     const clienteDB = await Cliente.findOne(filter);
     return res.json(clienteDB);
   } catch (e) {
-    return res.status(500).json({ msj: e });
+    return res
+      .status(500)
+      .json({ msj: "No se puede realizar la solicitud!!", e });
   }
 };
 
